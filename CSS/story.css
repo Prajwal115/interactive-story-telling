@@ -1,0 +1,124 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Syne:wght@400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Syne:wght@400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Syne:wght@400..800&display=swap');
+
+
+body {
+    margin: 0;
+    padding: 0;
+    background: rgb(0, 5, 2);
+    animation: 2s appear;
+    overflow-x: hidden;
+}
+
+@keyframes appear {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+html{
+    scroll-behavior: smooth;
+}
+
+nav {
+    
+
+    height: 80px;
+    width: auto;
+    background:#1e1e1e;
+    border-bottom: 0.5px solid #040933;
+}
+
+#stoname1{
+    font-family: "Source Code Pro", monospace;
+    font-weight: 500;
+    margin-top: 27px;
+    margin-right: 60px;
+    color:white;
+    float:right;
+    text-transform: capitalize;
+    font-size: 21px;
+}
+#stoname2{
+    font-family: "Roboto Serif", serif;
+    font-weight: 500;
+    margin-top: 27px;
+    margin-right: 60px;
+    color:white;
+    float:right;
+    text-transform: capitalize;
+    font-size: 21px;
+}
+nav button{
+    cursor: pointer;
+    font-family: "Source Code Pro", monospace;
+    font-weight: 500;
+    width: 80px;
+    height: 30px;
+    float:left;
+    margin-top: 24px;
+    margin-left: 60px;
+    border-radius: 25px;
+    transition: 0.8s;
+    border: 1px solid white;
+    color:rgb(255, 255, 255);
+    background: none;
+}
+
+nav #button2{
+    font-family: "Roboto Serif", serif;
+}
+nav button:hover{
+    background-color: white;
+    color: black;
+    transition: 0.8s;
+}
+
+.main{
+    margin-top: 100px;
+    margin-left: 150px;
+}
+.main h1{
+    font-size: 50px;
+    color:white;
+    font-family: "Montserrat",sans-serif;
+    font-weight: 700;
+    width: 90%;
+    padding-bottom: 30px;
+}
+
+#titlesto2{
+    font-family: "Roboto Serif",serif;
+}
+
+.main button{
+    display: inline-block;
+    width: 500px;
+    padding-right: 50px;
+    font-size: 17px;
+    padding: 5px;
+    text-align: center;
+    cursor: pointer;
+    margin-right: 60px;
+    background: white;
+    font-family: "Montserrat",sans-serif;
+    font-weight: 500;
+    color:rgb(0, 0, 0);
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 30px;
+    height: 150px;
+    transition: 1s;
+    
+}
+
+.main button:hover{
+    transition: 1s;
+    border: 1px solid rgb(255, 255, 255);
+    background: black;
+    color:white;
+}

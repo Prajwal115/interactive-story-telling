@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="CSS/index.css">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <title>Home | The Story Vault</title>
+</head>
+
+<style>
+  #box01 {
+    background: url("IMG/whitebg.jpg");
+    background-size: 10%;
+
+  }
+  #box02 {
+    color:white;
+    background: url("IMG/cavebg.jpg");
+    background-size: 60%;
+
+  }
+</style>
+
+<body>
+
+  <nav>
+    <img id="logo" src="IMG/tsv logo.png" href="#starthead">
+    <svg id="menu" onclick="openNav()" width="37" height="27" viewBox="0 0 47 37" fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <rect width="47" height="7" fill="#FF6B6B" />
+      <rect width="47" height="7" fill="black" fill-opacity="0.2" />
+      <rect y="15" width="47" height="7" fill="#FF6B6B" />
+      <rect y="15" width="47" height="7" fill="black" fill-opacity="0.2" />
+      <rect y="30" width="47" height="7" fill="#FF6B6B" />
+      <rect y="30" width="47" height="7" fill="black" fill-opacity="0.2" />
+    </svg>
+
+  </nav>
+  <div id="myNav" class="overlay">
+
+    <!-- Button to close the overlay navigation -->
+    <svg onclick="closeNav()" id="closeit" width="35" height="34" viewBox="0 0 40 39" fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <rect x="1" y="33.234" width="47" height="7" transform="rotate(-45 1 33.234)" fill="#1e1e1e" />
+      <rect x="1" y="33.234" width="47" height="7" transform="rotate(-45 1 33.234)" fill="black" fill-opacity="0.2" />
+      <rect x="4.94971" width="47" height="7" transform="rotate(45 4.94971 0)" fill="#1e1e1e" />
+      <rect x="4.94971" width="47" height="7" transform="rotate(45 4.94971 0)" fill="black" fill-opacity="0.2" />
+    </svg>
+
+
+
+    <!-- Overlay content -->
+    <div class="overlay-content">
+      <a href="index.html" onclick="closeNav()">Home</a>
+      <a href="#choose" onclick="closeNav()">Choose your story</a>
+      <a href="#bottom" onclick="closeNav()">About this Website</a>
+
+    </div>
+
+  </div>
+  <div class="starthead">
+    <h1 id="exp"><span id="story">Experience a story</span><br>like never before.</h1>
+    <svg id="downic" width="60" height="60" viewBox="0 0 95 95" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M47.75 60.9583L24 37.2083L29.5417 31.6667L47.75 49.875L65.9583 31.6667L71.5 37.2083L47.75 60.9583Z"
+        fill="url(#paint0_linear_5_35)" />
+      <defs>
+        <linearGradient id="paint0_linear_5_35" x1="48.25" y1="8" x2="46.75" y2="105" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#FF6B6B" />
+          <stop offset="1" stop-color="#652EDB" />
+        </linearGradient>
+      </defs>
+    </svg>
+
+  </div>
+  <div class="choose" id="choose">
+    <div id="chooseme">
+      <h1>CHOOSE</h1>
+      <h2>Your story</h2>
+    </div>
+    <div class="stories" id="stories">
+      <div class="box" id="box01">
+        <h3>A person in<br>White clothes.</h3>
+        <div class="right">
+          <h4>Mystery</h4>
+          <a href="01.html">
+            <button id="stob">Proceed to story</button>
+          </a>
+        </div>
+      </div>
+      <div class="box" id="box02">
+        <h3>A Cave of<br>Surprises.</h3>
+        <div class="right">
+          <h4>Fantasy</h4>
+          <a href="02.html">
+            <button id="stob">Proceed to story</button>
+          </a>
+        </div>
+      </div>
+      <div class="box" id="box03">
+        <h3>More Stories<br><strong>Coming Soon.</strong></h3>
+
+
+      </div>
+    </div>
+    <footer id = "abc">
+      <p>This is a website project, made with HTML, CSS and Javascript -  made for educational purposes. More Stories are coming soon. Every story has an object attached to it, which keeps track of the current story, the choices, and where those choices are pointing to. <br><strong>Copyright 2024 RealJupiter05.</strong></p>
+      <div class = "foright">
+        <img id = "tsv" src = "IMG/tsv2.png">
+        <img id = "jup" src="IMG/realjupiter05 logo.png">
+        <a href="https://www.linkedin.com/in/innovativechallenger/">
+        <button>Check out my Linkedin!</button>
+      </a>
+      </div>
+    </footer>
+  </div>
+<div id = "bottom"></div>
+  
+  <script>
+    // When the user scrolls down 50px from the top of the document, resize the header's font size
+    window.onscroll = function () { scrollFunction() };
+
+    function scrollFunction() {
+      if (document.body.scrollTop < 400 || document.documentElement.scrollTop > 400 && document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+        document.getElementById("chooseme").style.display = "none";
+        document.getElementById("stories").style.display = "none";
+        document.getElementById("abc").style.display = "none";
+        document.getElementById("choose").style.background = "black";
+        document.getElementById("choose").style.transition = "0.5s";
+        document.getElementById("abc").style.transition = "0.5s";
+        document.getElementById("stories").style.transition = "0.5s";
+      }
+
+      if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400 && document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+        document.getElementById("chooseme").style.display = "none";
+        document.getElementById("stories").style.display = "none";
+        document.getElementById("choose").style.background = "#1e1e1e";
+        document.getElementById("choose").style.transition = "0.5s";
+        document.getElementById("abc").style.display = "none";
+        document.getElementById("abc").style.transition = "0.5s";
+        document.getElementById("stories").style.transition = "0.5s";
+      }
+      if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500 && document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+        document.getElementById("chooseme").style.display = "none";
+        document.getElementById("stories").style.display = "none";
+        document.getElementById("choose").style.background = "#1e1e1e";
+        document.getElementById("choose").style.transition = "0.5s";
+        document.getElementById("stories").style.transition = "0.5s";
+        document.getElementById("abc").style.display = "none";
+        document.getElementById("abc").style.transition = "0.5s";
+      }
+      if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600 && document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+        document.getElementById("chooseme").style.display = "block";
+        document.getElementById("stories").style.display = "block";
+        document.getElementById("choose").style.background = "#fdfdfd";
+        document.getElementById("stories").style.transition = "0.5s";
+        document.getElementById("choose").style.transition = "0.5s";
+      }
+      if (document.body.scrollTop > 900 || document.documentElement.scrollTop > 900 && document.body.scrollTop > 900 || document.documentElement.scrollTop > 900) {
+        document.getElementById("chooseme").style.display = "block";
+        document.getElementById("chooseme").style.display = "block";
+        document.getElementById("stories").style.display = "block";
+        document.getElementById("choose").style.background = "#ffffff";
+        document.getElementById("choose").style.transition = "0.5s";
+        document.getElementById("abc").style.display = "block";
+        document.getElementById("abc").style.transition = "0.5s";
+        document.getElementById("stories").style.transition = "0.5s";
+      }
+    }
+  </script>
+  <script src="changefont.js"></script>
+</body>
+
+</html>
